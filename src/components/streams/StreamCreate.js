@@ -1,5 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import { connext } from "react-redux";
+import { createStream } from "../../actions";
 
 class StreamCreate extends React.Component {
   renderErrors({ error, touched }) {
@@ -11,7 +13,7 @@ class StreamCreate extends React.Component {
       );
     }
   }
-
+  // shows the input fields
   showForm = ({ input, label, meta }) => {
     const errorField = `field ${meta.error && meta.touched ? "error" : ""}`;
     return (
@@ -43,6 +45,7 @@ class StreamCreate extends React.Component {
   }
 }
 
+// show the error message in fields
 const validate = formValues => {
   const errors = {};
   if (!formValues.title) {
