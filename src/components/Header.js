@@ -9,7 +9,7 @@ const Header = () => {
         Streams
       </Link>
       <div className="right menu">
-        <Link to="/streams/edit" className="item">
+        <Link to="/streams/new" className="item">
           All Streams
         </Link>
         <GoogleAuth />

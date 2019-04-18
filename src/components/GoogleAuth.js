@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { signIn, signOut } from "../actions/index";
+// import { createStream } from "../actions/index";
 
 export class GoogleAuth extends Component {
   componentDidMount() {
